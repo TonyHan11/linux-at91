@@ -308,14 +308,17 @@
 };
 
 &dma0 {
+	interrupts = <GIC_SPI 22 IRQ_TYPE_LEVEL_HIGH>;
 	clocks = <&scmi0_clock AT91_SCMI_CLK_PERIPH_DMA0_CLK>;
 };
 
 &dma1 {
+	interrupts = <GIC_SPI 23 IRQ_TYPE_LEVEL_HIGH>;
 	clocks = <&scmi0_clock AT91_SCMI_CLK_PERIPH_DMA1_CLK>;
 };
 
 &dma2 {
+	interrupts = <GIC_SPI 24 IRQ_TYPE_LEVEL_HIGH>;
 	clocks = <&scmi0_clock AT91_SCMI_CLK_PERIPH_DMA2_CLK>;
 };
 
