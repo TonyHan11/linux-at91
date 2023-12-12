@@ -1069,6 +1069,7 @@
 			#dma-cells = <1>;
 			clocks = <&pmc PMC_TYPE_PERIPHERAL 22>;
 			clock-names = "dma_clk";
+			atmel,channels = <32>;
 			status = "disabled";
 		};
 
@@ -1079,6 +1080,7 @@
 			#dma-cells = <1>;
 			clocks = <&pmc PMC_TYPE_PERIPHERAL 23>;
 			clock-names = "dma_clk";
+			atmel,channels = <32>;
 			status = "disabled";
 		};
 
@@ -1091,6 +1093,7 @@
 			clocks = <&pmc PMC_TYPE_PERIPHERAL 24>;
 			clock-names = "dma_clk";
 			dma-requests = <0>;
+			atmel,channels = <8>;
 			status = "disabled";
 		};
 
