@@ -92,8 +92,12 @@
 	sound: sound {
 		#address-cells = <1>;
 		#size-cells = <0>;
+#ifdef CONFIG_OPTEE
+		assigned-clocks = <&scmi0_clock AT91_SCMI_CLK_CORE_AUDIOPLLCK>;
+#else
 		assigned-clocks = <&pmc PMC_TYPE_CORE PMC_AUDIOPMCPLL>;
 		assigned-clock-rates = <196608000>;
+#endif
 		compatible = "microchip,asrc-card";
 		microchip,model = "mchp-asrc-card @ sama7g5 EK";
 		status = "okay";
