@@ -364,6 +364,34 @@
 	clocks = <&scmi0_clock AT91_SCMI_CLK_PERIPH_SPDIFTX_CLK>, <&scmi0_clock AT91_SCMI_CLK_GCK_SPDIFTX_GCLK>;
 };
 
+&utmi_clk {
+	clocks = <&scmi0_clock AT91_SCMI_CLK_CORE_UTMI>;
+};
+
+&usb_phy0 {
+	clocks = <&scmi0_clock AT91_SCMI_CLK_UTMI1>;
+};
+
+&usb_phy1 {
+	clocks = <&scmi0_clock AT91_SCMI_CLK_UTMI2>;
+};
+
+&usb_phy2 {
+	clocks = <&scmi0_clock AT91_SCMI_CLK_UTMI3>;
+};
+
+&usb0 {
+	clocks = <&scmi0_clock AT91_SCMI_CLK_PERIPH_UDPHSA_CLK>, <&usb_clk>;
+};
+
+&usb1 {
+	clocks = <&scmi0_clock AT91_SCMI_CLK_PERIPH_UDPHSB_CLK>, <&usb_clk>;
+};
+
+&usb2 {
+	clocks = <&scmi0_clock AT91_SCMI_CLK_PERIPH_UHPHS_CLK>, <&scmi0_clock AT91_SCMI_CLK_UTMI1>, <&usb_clk>;
+};
+
 &usb3 {
 	clocks = <&usb_clk>, <&scmi0_clock AT91_SCMI_CLK_PERIPH_UHPHS_CLK>;
 };
